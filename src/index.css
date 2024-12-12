@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.myNavbar-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.myNavbar-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.myNavbar-exit {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.myNavbar-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #0f172a 0%,
+    #44107a 29%,
+    #ef4444 67%,
+    #fecaca 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.skewed {
+  width: 2000px;
+  transform: skew(-4deg) rotate(4deg);
+  overflow: hidden;
+}
+
+.skewed > img {
+  transform: skew(4deg) rotate(-4deg);
+}
+
+.skewed__skills {
+  width: 500px;
+  transform: skew(4deg) rotate(-4deg);
+  overflow: hidden;
+}
+
+.skewed__skills > img {
+  transform: skew(-4deg) rotate(4deg);
+}
+
+@media screen and (max-width: 1024px) {
+  .skewed,
+  .skewed__skills {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .skewed__skills {
+    width: 25%;
+    transform: skew(0deg) rotate(0deg);
+  }
+  .skewed__skills > img {
+    transform: skew(0deg) rotate(0deg);
+    margin: 60px;
+  }
+  .works {
+    width: 35%;
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .works {
+    width: 70%;
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .works {
+    width: 50%;
+    height: max-content;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 800ms, transform 500ms;
+}
+
+.fade2-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade2-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade2-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade2-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.fade2-enter-active,
+.fade2-exit-active {
+  transition: opacity 800ms, transform 500ms;
+}
